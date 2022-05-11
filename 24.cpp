@@ -46,7 +46,7 @@ int main() {
         nX = 1 + (rand()%20);
         nY = 1 + (rand()%20);
         gotoxy(nX, nY);
+        cout << 1 + (rand()%20);
     }
-    cout << 1 + (rand()%20);
     return 0;
 }
