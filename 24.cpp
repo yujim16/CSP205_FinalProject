@@ -23,7 +23,7 @@ class Vector{
     Vector operator/(float s) const;
 
     Vector Normalized() const;
-    
+
     float x, y;
 };
 
@@ -81,7 +81,7 @@ float Vector::LengthSqr() const {
     return length;
 }
 
-Vector operator-(Point a, Point b) { 
+Vector operator-(Point a, Point b) {
     Vector v;
     v.x = a.x - b.x;
     v.y = a.y - b.y;
@@ -150,7 +150,7 @@ int main(){
         Sleep(500);
         system("cls");
         srand((unsigned) time(0));
-        
+
         p1.x += 1 + (rand() % 2);
         p1.AddVector(player1);
         gotoxy(p1.x, p1.y);
@@ -158,7 +158,7 @@ int main(){
 
         p2.x += 1 + (rand() % 2);
         p2.AddVector(player2);
-        gotoxy(p2.x, p1.y);
+        gotoxy(p2.x, p2.y);
         cout << "O";
 
 
