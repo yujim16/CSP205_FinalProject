@@ -1,9 +1,31 @@
-#include <iostream>
-#include <cmath>
-#include <stdio.h>
-#include <conio.h>
+#include<iostream>
+#include<conio.h>
+#include<dos.h>
+#include<stdlib.h>
+#include<string.h>
 #include <windows.h>
-#include <stdlib.h>
-#include <ctime>
+#include <time.h>
+
 using namespace std;
 
+char l[] = "ººººº";
+int i;
+
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+COORD CursorPosition;
+
+void gotoxy(int x, int y) {
+  CursorPosition.X = x;
+  CursorPosition.Y = y;
+  SetConsoleCursorPosition(console, CursorPosition);
+}
+void setcursor(bool visible, DWORD size) 
+{
+  if (size == 0) {
+    size = 20;
+  }
+  CONSOLE_CURSOR_INFO lpCursor;
+  lpCursor.bVisible = visible;
+  lpCursor.dwSize = size;
+  SetConsoleCursorInfo(console, & lpCursor);
+}
