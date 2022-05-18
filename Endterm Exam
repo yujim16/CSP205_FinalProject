@@ -49,10 +49,12 @@ void setplayers() {
   printBorder();
   gotoxy(4, 3);
   cout << "SCORE : 0";
-  gotoxy(25, 3);
-  cout << "Use w and s to move.";
+  gotoxy(22, 3);
+  cout << "Use W and S to move.";
   gotoxy(50, 3);
   cout << "Press Esc key to quit game";
+  gotoxy(22, 26);
+  cout << "Press SPACE to PAUSE";
   for (i = 3; i <= 78; i++) {
     gotoxy(i, 4);
     cout << '-';
@@ -202,6 +204,11 @@ void gameplay() {
       go = 1;
       gotoxy(22, 12);
       cout << "                                       ";
+    }
+    if ((ch == 'r' || ch == 'R' || ch == 13) && op == 0) {
+      op = 1;
+      gameplay();
+      break;
     }
     if ((ch == 's' || ch == 'S' || ch == 80) && c <= 19 && op) {
       gotoxy(5, c + strlen(l));
