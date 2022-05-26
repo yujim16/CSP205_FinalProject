@@ -130,27 +130,13 @@ int main(){
     player1.y = 2;
     Point p1(1, 6);
 
-    Vector Enemy; /// O
+    Vector player2; /// O
+    player2.x = 1;
+    player2.y = 2;
+    Point p2(1, 6); 
 
     Sleep(3000);
     gotoxy(player1.x, player1.y);
-<<<<<<< HEAD
-    cout << ">";
-
-    gotoxy(50, 1); cout << "|";
-    gotoxy(50, 2); cout << "|";
-    gotoxy(50, 3); cout << "|";
-    gotoxy(50, 4); cout << "|";
-    gotoxy(50, 5); cout << "|";
-    gotoxy(50, 6); cout << "|";
-    gotoxy(50, 7); cout << "|";
-    gotoxy(50, 8); cout << "|";
-    gotoxy(50, 9); cout << "|";
-    gotoxy(50, 10); cout << "|";
-    gotoxy(50, 11); cout << "|";
-
-    Sleep(5000);
-=======
     cout << "X";
     gotoxy(player2.x, player2.y);
     cout << "O";
@@ -193,7 +179,6 @@ int main(){
         }
 
     }
->>>>>>> 70b384296d5a9e266df1238455a5ad2453ffb56f
 
     return 0;
 }
