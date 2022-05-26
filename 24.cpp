@@ -128,12 +128,12 @@ int main(){
     Vector player1; /// X
     player1.x = 1;
     player1.y = 2;
-    Point p1(1, 2);
+    Point p1(1, 6);
 
     Vector player2; /// O
     player2.x = 1;
-    player2.y = 4;
-    Point p2(1, 4);
+    player2.y = 2;
+    Point p2(1, 6); 
 
     Sleep(3000);
     gotoxy(player1.x, player1.y);
