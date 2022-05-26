@@ -127,18 +127,13 @@ int main(){
     Vector player1; /// X
     player1.x = 1;
     player1.y = 2;
-    Point p1(1, 2);
+    Point p1(1, 6);
 
-    Vector player2; /// O
-    player2.x = 1;
-    player2.y = 4;
-    Point p2(1, 4);
+    Vector Enemy; /// O
 
     Sleep(3000);
     gotoxy(player1.x, player1.y);
     cout << ">";
-    gotoxy(player2.x, player2.y);
-    cout << "O";
 
     gotoxy(50, 1); cout << "|";
     gotoxy(50, 2); cout << "|";
@@ -152,39 +147,7 @@ int main(){
     gotoxy(50, 10); cout << "|";
     gotoxy(50, 11); cout << "|";
 
-
-    for(int x1 = 2; x1 < 30; x1++){
-        Sleep(500);
-        system("cls");
-        srand((unsigned) time(0));
-
-        p1.x += 1 + (rand() % 2);
-        p1.AddVector(player1);
-        gotoxy(p1.x, p1.y);
-        cout << "X";
-
-        p2.x += 1 + (rand() % 2);
-        p2.AddVector(player2);
-        gotoxy(p2.x, p2.y);
-        cout << "O";
-
-
-        gotoxy(29, 1); cout << "|";
-        gotoxy(29, 2); cout << "|";
-        gotoxy(29, 3); cout << "|";
-        gotoxy(29, 4); cout << "|";
-        gotoxy(29, 5); cout << "|";
-
-        if(p1.x >=30){
-            gotoxy(0, 8); cout << "Player 1 wins" << endl;
-            break;
-        }
-        if(p2.x >=30){
-            gotoxy(0, 8); cout << "Player 2 wins" << endl;
-            break;
-        }
-
-    }
+    Sleep(5000);
 
     return 0;
 }
