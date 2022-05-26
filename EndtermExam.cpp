@@ -30,6 +30,8 @@ void setcursor(bool visible, DWORD size)
   lpCursor.dwSize = size;
   SetConsoleCursorInfo(console, & lpCursor);
 }
+
+
 void printBorder() {
   for (i = 2; i <= 79; i++) {
     gotoxy(i, 1);
@@ -44,6 +46,8 @@ void printBorder() {
     cout << '|';
   }
 }
+
+
 void setplayers() {
   system("cls");
   printBorder();
@@ -68,6 +72,8 @@ void setplayers() {
     cout << l[i];
   }
 }
+
+
 void gameplay() {
   setplayers();
   int sc = 0, pp = 0, st = 1;
@@ -229,6 +235,8 @@ void gameplay() {
     }
   }
 }
+
+
 
 int main() {
     setcursor(0, 0);

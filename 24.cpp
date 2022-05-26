@@ -33,6 +33,7 @@ Vector Vector::operator+(const Vector& v) const{
    retV.y = y + v.y;
    return retV;
 }
+
 Vector Vector::operator-(const Vector& v) const{
    return Vector(x - v.x, y - v.y);
 }
@@ -48,7 +49,7 @@ class Point{
     float x, y;
 };
 
-Vector Vector:: Normalized() const {
+Vector Vector::Normalized() const {
     Vector normalized;
 
     normalized = (*this) / Length();
@@ -136,22 +137,15 @@ int main(){
 
     Sleep(3000);
     gotoxy(player1.x, player1.y);
-    cout << ">";
+    cout << "X";
     gotoxy(player2.x, player2.y);
     cout << "O";
 
-    gotoxy(50, 1); cout << "|";
-    gotoxy(50, 2); cout << "|";
-    gotoxy(50, 3); cout << "|";
-    gotoxy(50, 4); cout << "|";
-    gotoxy(50, 5); cout << "|";
-    gotoxy(50, 6); cout << "|";
-    gotoxy(50, 7); cout << "|";
-    gotoxy(50, 8); cout << "|";
-    gotoxy(50, 9); cout << "|";
-    gotoxy(50, 10); cout << "|";
-    gotoxy(50, 11); cout << "|";
-
+    gotoxy(29, 1); cout << "|";
+    gotoxy(29, 2); cout << "|";
+    gotoxy(29, 3); cout << "|";
+    gotoxy(29, 4); cout << "|";
+    gotoxy(29, 5); cout << "|";
 
     for(int x1 = 2; x1 < 30; x1++){
         Sleep(500);
