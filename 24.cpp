@@ -128,16 +128,17 @@ int main(){
     Vector player1; /// X
     player1.x = 1;
     player1.y = 2;
-    Point p1(1, 6);
+    Point p1(1, 2);
 
     Vector player2; /// O
     player2.x = 1;
-    player2.y = 2;
-    Point p2(1, 6); 
+    player2.y = 4;
+    Point p2(1, 4);
 
     Sleep(3000);
     gotoxy(player1.x, player1.y);
     cout << "X";
+
     gotoxy(player2.x, player2.y);
     cout << "O";
 
